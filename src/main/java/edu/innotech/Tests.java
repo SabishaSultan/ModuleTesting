@@ -4,6 +4,9 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -23,6 +26,8 @@ public class Tests {
         Assertions.assertTrue(grades.contains(3));
         Assertions.assertTrue(grades.contains(4));
         Assertions.assertTrue(grades.contains(5));
+
+        System.out.println("Тест \"Проверка записи оценок\"");
     }
 
     @Test
@@ -47,7 +52,7 @@ public class Tests {
     @Tag("smoke")
     @DisplayName("Проверка невалидных оценок")
     public void marksNotInRange() {
-        List<Integer> lst = List.of(0, 1, 6, 7);
+        List<Integer> lst = Arrays.asList(0, 1, 6, 7);
         Student stud = new Student("vasia");
         Assertions.assertThrows(IllegalArgumentException.class, () -> stud.addGrade(lst.get(0)));
         Assertions.assertThrows(IllegalArgumentException.class, () -> stud.addGrade(lst.get(1)));
