@@ -52,6 +52,17 @@
             <version>5.8.2</version>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>com.github.sparkmuse</groupId>
+            <artifactId>wiremock-junit-jupiter</artifactId>
+            <version>1.3.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <version>5.18.0</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -85,7 +96,7 @@
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.10</version>
                 <executions>
-                    <execution> <!-- Исправлено с exection на execution -->
+                    <execution>
                         <id>prepare-agent</id>
                         <goals>
                             <goal>prepare-agent</goal>
