@@ -1,5 +1,6 @@
-package Main.edu.innotech;
+package Main.test;
 
+import Main.edu.innotech.Student;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
